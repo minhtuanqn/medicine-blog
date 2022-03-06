@@ -1,4 +1,4 @@
-package com.customexception;
+package com.tuanlm.medicine.customexception;
 
 /**
  * Custom exception about a class(like exception abount field name,...)

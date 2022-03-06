@@ -1,5 +1,7 @@
 package com.tuanlm.medicine.entity;
 
+import com.tuanlm.medicine.model.TopicModel;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -20,6 +22,13 @@ public class TopicEntity {
     private boolean status;
 
     public TopicEntity() {
+    }
+
+    public TopicEntity(TopicModel model) {
+        this.id = model.getId();
+        this.name = model.getName();
+        this.description = model.getDescription();
+        this.status = model.isStatus();
     }
 
     public UUID getId() {

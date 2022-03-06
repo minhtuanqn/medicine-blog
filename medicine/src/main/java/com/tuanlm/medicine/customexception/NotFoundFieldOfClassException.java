@@ -1,4 +1,4 @@
-package com.customexception;
+package com.tuanlm.medicine.customexception;
 
 /**
  * Custom exception for no such name of field in a class
