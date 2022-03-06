@@ -3,13 +3,20 @@ pipeline {
   stages {
     stage("build") {
       steps {
-        echo 'building application..'
+        sh './gradlew clean build'
       }
     }
     stage("test") {
       steps {
-         echo 'testing application..'
+         sh './gradlew test'
       }
+      
+      post {
+        always {
+          junit '**/target/surefire-reports/TEST-*.xml'
+        }
+      }
+      
     }
     stage("deploy") {
       steps {
