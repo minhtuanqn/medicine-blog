@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.CrudRepository;
 
 public interface TopicRepository extends CrudRepository<TopicEntity, Integer>, JpaSpecificationExecutor<TopicEntity> {
-
+    boolean existsTopicEntityByName(String name);
 }
