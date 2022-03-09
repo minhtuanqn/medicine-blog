@@ -5,6 +5,7 @@ pipeline {
   }
   stages ("test") {
     stage("build") {
+      withGradle {
          sh './gradlew build'
       }
     }
