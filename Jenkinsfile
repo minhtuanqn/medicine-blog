@@ -11,7 +11,7 @@ pipeline {
     }
     stage("test") {
       steps {
-         sh './gradlew test'
+         sh './gradlew cleanTest test'
       }
     }
     stage("deploy") {
