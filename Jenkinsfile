@@ -6,6 +6,7 @@ pipeline {
   stages ("test") {
     stage("build") {
       steps {
+        sh 'gradle init'
         sh 'gradle clean build'
       }
     }
