@@ -11,7 +11,7 @@ pipeline {
     }
     stage("test") {
       steps {
-         sh './gradlew buildEnvironment'
+         sh './check'
          sh './gradlew test clean'
       }
     }
