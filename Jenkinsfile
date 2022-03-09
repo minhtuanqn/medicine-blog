@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { docker { image 'gradle-openjdk-11-slim' } }
   stages {
     stage("build") {
       steps {
