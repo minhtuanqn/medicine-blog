@@ -6,14 +6,14 @@ pipeline {
   stages ("test") {
     stage("build") {
       steps {
-        sh 'gradle init'
-        sh 'gradle build'
+        sh './gradlew init'
+        sh './gradlew clean build'
       }
     }
     stage("test") {
       steps {
-         sh 'gradle tasks'
-         sh 'gradle test'
+         sh './gradlew tasks'
+         sh './gradlew test'
       }
     }
     stage("deploy") {
