@@ -6,7 +6,6 @@ pipeline {
   stages ("test") {
     stage("build") {
       steps {
-         sh 'cd ./medicine-blog-pipeline'
          sh './gradlew init'
          sh './gradlew clean build'
       }
