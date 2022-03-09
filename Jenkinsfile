@@ -2,12 +2,12 @@ pipeline {
   agent any
   stages {
     stage("build") {
-      steps {
+      steps withGradle {
         sh './gradlew clean build'
       }
     }
     stage("test") {
-      steps {
+      steps withGradle {
          sh './gradlew test'
       }
       
@@ -18,7 +18,7 @@ pipeline {
       }
       
     }
-    stage("deploy") {
+    stage("deploy") withGradle {
       steps {
          echo 'deploying application..'
       }
