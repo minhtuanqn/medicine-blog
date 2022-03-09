@@ -5,11 +5,10 @@ pipeline {
   }
   stages ("test") {
     stage("build") {
-      dir('./medicine-blog-pipeline') {
-        steps {
-          sh './gradlew init'
-          sh './gradlew clean build'
-        }
+      steps {
+         sh './medicine-blog-pipeline'
+         sh './gradlew init'
+         sh './gradlew clean build'
       }
     }
     stage("test") {
